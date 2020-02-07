@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tiền tệ</title>
+	<meta charset="utf-8">
+</head>
+<body>
+     <script type="text/javascript">
+     function money(){
+     	let sotien = document.getElementById("input").value;
+     	let country = document.getElementById("country").value;
+        let loaitien = document.getElementById("mo").value;
+        let doitien;
+            if (loaitien == "USD" && country == "vietnam") {
+                doitien = sotien / 23000;
+               document.write("Số tiền là:" + doitien +"USD");
+    
+            }
+            else if (loaitien == "VND" && country == "my"){
+                doitien = sotien *23000;
+               document.write("Số tiền là:" + doitien + "VND")
+           }
+                else if  (loaitien == "VND" && country == "vietnam"){
+                	doitien = sotien;
+                	document.write("Số tiền là:" + doitien +"VND");
+                	}
+                	else {
+                	doitien = sotien;
+                	document.write("Số tiền là:" + doitien + "USD");
+                }
+                
+            }
+
+     </script>
+<form>
+  Amount:<br>
+  <input id="input" type="text" name="sotien" value="1">
+<br>
+  Quốc Gia:<br>
+  <select id="country">
+    <option value="vietnam">Việt Nam</option>
+    <option value="my">Mỹ</option>
+  </select>
+  <br>
+  To Currency:<br>
+  <select id="mo">
+    <option value="VND">VND</option>
+    <option value="USD">USD</option>
+  </select>
+  <br>
+  <br>
+   <button  onclick="money()">Đổi</button>
+</form>
+</body>
+</html>

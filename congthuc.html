@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Công thức tính</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<form name="Congthuc" style="height: 30px;width: 60px">
+	<br>
+	<input id="num1" type="number">
+	<input id="num2" type="number">
+	<br><br>
+	<button type="button" onclick="sum()">(+)</button>
+	<button type="button" onclick="sub()">Sub(-)</button>
+	<button type="button" onclick="mul()">Mul(*)</button>
+	<button type="button" onclick="div()">div(/)</button>
+<div id="ketqua"></div>
+</form>
+<script type="text/javascript">
+
+function sum() {
+	let a = parseInt(document.getElementById("num1").value);
+	let b = parseInt(document.getElementById("num2").value);
+	let c = a + b;
+	document.getElementById('ketqua').innerHTML= c;
+
+}
+function div()
+{
+    let a = parseInt(document.getElementById("num1").value);
+	let b = parseInt(document.getElementById("num2").value);
+	let d = a / b;
+	document.getElementById('ketqua').innerHTML= d;
+}
+function sub()
+{
+    let a = parseInt(document.getElementById("num1").value);
+	let b = parseInt(document.getElementById("num2").value);
+	let e = a - b;
+	document.getElementById('ketqua').innerHTML= e;
+}
+function mul()
+{
+    let a = parseInt(document.getElementById("num1").value);
+	let b = parseInt(document.getElementById("num2").value);
+	let f = a * b;
+	document.getElementById('ketqua').innerHTML= f;
+}
+
+</script>
+</body>
+</html>
